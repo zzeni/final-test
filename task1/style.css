@@ -40,3 +40,23 @@ ul > li img {
 }
 
 /* Вашият CSS от тук надолу */
+
+li ,img {
+    width: 100%;
+  }
+
+@media screen and (max-width: 1000px) {
+ 
+}
+
+@media screen and (max-width: 399px) {
+  ul {
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+  }
+}

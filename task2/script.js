@@ -5,17 +5,33 @@
 var arr = [2, 5, 8, 4, 1, 12];
 
 //...
+arr.sort(function (a,b) {
+  return a-b;
+});
+
+console.log(arr);
+
 
 // задача 2 (4т.)
 // Напишете функция, която да изважда всички думи, с дължина над 4 символа от следния текст:
 var text = "The quick brown fox jumps over the lazy dog";
 
 // ...
+let split = text.split(" ");
+let result = split.filter(word => word.length < 4);
+
+console.log(result);
 
 // задача 3 (5т.)
 // Напишете код, който на всяка секунда закача към `#container` елемента следния html елемент: `<p>repetition is fun</p>`
 
 // ...
+let par = document.createElement("p");
+var node = document.createTextNode("repetition is fun");
+par.appendChild(node);
+let timer = setInterval(function(){
+  document.querySelector("#container").appendChild(par);
+}, 1000);
 
 // задача 4 (6т.)
 // Направете така, че 2 секунди след зареждането на дадена страница, всички картинки в нея да се завъртят по вертикалната си ос (по Y)
